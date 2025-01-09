@@ -1,14 +1,14 @@
 <?php
 /*
-Plugin Name: Add nofollow Header for misc
-Description: Adds a nofollow header to all content at /misc/*
-Version: 1.0
-Author: David Greene
+Plugin Name: Add nofollow Header for /team
+Description: Adds a nofollow header to the exact /team URL.
+Version: 1.1
+Author: David Greene (BigScoots)
 */
 
 function add_nofollow_header() {
-    // Check if the request URI starts with '/misc/'
-    if (strpos($_SERVER['REQUEST_URI'], '/misc/') === 0) {
+    // Check if the request URI matches exactly '/team'
+    if (trim($_SERVER['REQUEST_URI'], '/') === 'team') {
         header('X-Robots-Tag: nofollow', true);
     }
 }
