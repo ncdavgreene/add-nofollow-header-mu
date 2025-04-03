@@ -3,7 +3,7 @@
 Plugin Name: Add nofollow Header for /team
 Description: Adds a nofollow header to the exact /team URL.
 Version: 1.1
-Author: David Greene (BigScoots)
+Author: David Greene (BS)
 */
 
 function add_nofollow_header() {
